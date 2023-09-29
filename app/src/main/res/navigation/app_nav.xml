@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/mainScreenFragment">
+
+    <fragment
+        android:id="@+id/mainScreenFragment"
+        android:name="com.gif.gifsapp.main.ui.MainScreenFragment"
+        android:label="MainScreenFragment">
+        <action
+            android:id="@+id/action_mainScreenFragment_to_detailedScreenFragment"
+            app:destination="@id/detailedScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailedScreenFragment"
+        android:name="com.gif.gifsapp.detailed.ui.DetailedScreenFragment"
+        android:label="DetailedScreenFragment">
+        <argument
+            android:name="url"
+            app:argType="string" />
+    </fragment>
+</navigation>
